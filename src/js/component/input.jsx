@@ -10,7 +10,16 @@ const Input = () => {
    const validate = (value) =>{
 if (value === ' ' ){alert("The input its not correct")} else (setInputValue(value))
    }
-
+   const handleOnKeyDown = (e) => {
+    if (e.key === "Enter") {
+        validateInput()
+        setInputValue("")
+    } ;}
+    
+    const validateTask = (item)=>{
+        if(item == 0){return <p>No items yet</p>}
+        else return <p>{item} items left</p>;}
+    
     return (
         <div className="back">
 
@@ -18,12 +27,8 @@ if (value === ' ' ){alert("The input its not correct")} else (setInputValue(valu
                 <ul>
                     <li >
                         <input type="text" onChange={e => validate(e.target.value)} value={inputValue} placeholder="Write your new task"
-                            onKeyPress= {(e) => {
-                                if (e.key === "Enter") {
-                                    validateInput()
-                                    setInputValue("")
-                                } ;}
-                            } />
+                            onKeyDown= {handleOnKeyDown}
+                            />
                             
                     </li>
                     
@@ -38,7 +43,7 @@ if (value === ' ' ){alert("The input its not correct")} else (setInputValue(valu
                     ))}
                 </ul>
                 <div className="task">
-                <p>{item.length} task</p>
+                <p>{validateTask(item.length)}</p>
             </div>
              
             </div>
