@@ -1,5 +1,5 @@
 body{
-    background-color:white;
+    background-image: url("https://c8.alamy.com/comp/M4WB3G/to-do-list-seamless-pattern-background-business-flat-vector-illustration-M4WB3G.jpg") ;
 }
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -12,7 +12,7 @@ ul li {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: white;
     list-style: none;
-    border: 1px solid gray ;
+    border: 1px solid rgba(128, 128, 128, 0.543) ;
     width: 300px;
     border-radius: 2px;
     text-align: left;
@@ -20,7 +20,7 @@ ul li {
     padding: 7px;
     margin-top: 5px;
     margin: auto;
-    margin-bottom: 5px;
+    
 
 }
 input{
@@ -31,9 +31,9 @@ input{
 }
 
 .back {
-    width: 600px;
+    width: 400px;
     height: 900px;
-    background-color: rgb(213, 234, 255);
+    background-color: rgba(30, 32, 34, 0.328);
     margin: auto;
     padding: 20px;
 }

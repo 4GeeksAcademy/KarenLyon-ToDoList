@@ -8,7 +8,7 @@ const Input = () => {
         else (setItem(item.concat(inputValue)));
     }
    const validate = (value) =>{
-if (value === ' ' ){alert("the input its not correct")} else (setInputValue(value))
+if (value === ' ' ){alert("The input its not correct")} else (setInputValue(value))
    }
 
     return (
@@ -17,7 +17,7 @@ if (value === ' ' ){alert("the input its not correct")} else (setInputValue(valu
                 <h1 className="text-center">To Do List</h1>
                 <ul>
                     <li >
-                        <input type="text" onChange={e => validate(e.target.value)} value={inputValue}
+                        <input type="text" onChange={e => validate(e.target.value)} value={inputValue} placeholder="Write your new task"
                             onKeyPress= {(e) => {
                                 if (e.key === "Enter") {
                                     validateInput()
@@ -28,7 +28,7 @@ if (value === ' ' ){alert("the input its not correct")} else (setInputValue(valu
                     </li>
                     
                     {item.map((listitem, index) => (
-                        <li className="listInput d-flex justify-content-between align-items-center">
+                        <li className="listInput d-flex justify-content-between align-items-center ">
                       {listitem}{" "}
 
                     <i class="fa-solid fa-trash trash" onClick={()=> setItem(item.filter(
